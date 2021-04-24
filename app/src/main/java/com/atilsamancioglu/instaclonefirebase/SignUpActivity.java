@@ -32,6 +32,8 @@ kullanıcı panelinden yapıyoruz.
         setContentView(R.layout.activity_signup);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        /* Tek seferlik initialization işlemini gerçekleştirdik şimdi bu firebaseauth nesnesi ile işlmeleri
+ gerçekleştireceğiz */
         emailText = findViewById(R.id.emailText);
         passwordText = findViewById(R.id.passwordText);
 
@@ -73,7 +75,9 @@ kullanıcı panelinden yapıyoruz.
     }
 
     public void signUpClicked (View view) {
-
+/* Biz email ve passwordu bir değişkene atamayıp direkt createuser metodunun içinde de bu işlemi yapabilirdik
+ama o zaman da ben değişkenlere bir atama yapmadığımdan adam e mailini girmemişse if email is not null
+diyemezdim bu yüzden değişkene atadım*/
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
 
