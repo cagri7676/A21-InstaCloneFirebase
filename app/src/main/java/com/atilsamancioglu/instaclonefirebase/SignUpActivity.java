@@ -16,7 +16,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
-
+    /* /Firebase'in productlarını kullanmadan önce her zaman bir defaya mahsus bir initialization yapmak lazım
+ Kullqnıcı kaydetmek için birsürü seçenek var Bunları firebase panelinden seçiyorsun.Biz bu 
+ projede sadece mail adresi ile kayıt gerçekleştiriyoruz.Hangi yolla kayıt olacağını kodlarla değil
+kullanıcı panelinden yapıyoruz.
+*/
 
     private FirebaseAuth firebaseAuth;
     EditText emailText, passwordText;
